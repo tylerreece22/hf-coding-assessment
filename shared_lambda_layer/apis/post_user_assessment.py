@@ -49,13 +49,13 @@ class MappedPostUserAssessmentResponse(UserAssessmentRequestBody):
 def post_user_assessment(
     body: UserAssessmentRequestBody,
 ) -> MappedPostUserAssessmentResponse:
-    '''
+    """
     This is just a mocked function but you can
     pretend it is making a request to an api
 
     :param body: UserAssessmentRequestBody
     :return: MappedPostUserAssessmentResponse
-    '''
+    """
     if body.id % 2 == 0:
         return MappedPostUserAssessmentResponse(
             **{
@@ -65,7 +65,7 @@ def post_user_assessment(
                 "phone": body.phone,
                 "fullAddress": body.full_address,
                 "ipv4": body.ipv4,
-                "riskRating": "high"
+                "riskRating": "high",
             }
         )
     elif body.id % 3 == 0:
@@ -77,7 +77,7 @@ def post_user_assessment(
                 "phone": body.phone,
                 "fullAddress": body.full_address,
                 "ipv4": body.ipv4,
-                "riskRating": "medium"
+                "riskRating": "medium",
             }
         )
     else:
@@ -89,6 +89,6 @@ def post_user_assessment(
                 "phone": body.phone,
                 "fullAddress": body.full_address,
                 "ipv4": body.ipv4,
-                "riskRating": "low"
+                "riskRating": "low",
             }
         )
