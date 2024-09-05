@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "hf-coding-assessment"
+version = "0.1.0"
+description = ""
+authors = ["Tyler Reeece me@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+pydantic = "^2.8.2"
+aws-lambda-typing = "^2.20.0"
+requests = "^2.32.3"
+email-validator = "^2.2.0"
+black = "^24.8.0"
+pytest = "^8.3.2"
+pyright = "^1.1.379"
+pylint = "^3.2.7"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
