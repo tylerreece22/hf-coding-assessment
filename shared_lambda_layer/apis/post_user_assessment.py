@@ -47,48 +47,48 @@ class MappedPostUserAssessmentResponse(UserAssessmentRequestBody):
 
 
 def post_user_assessment(
-    body: UserAssessmentRequestBody,
+    request_body: UserAssessmentRequestBody,
 ) -> MappedPostUserAssessmentResponse:
     """
     This is just a mocked function but you can
     pretend it is making a request to an api
 
-    :param body: UserAssessmentRequestBody
+    :param request_body: UserAssessmentRequestBody
     :return: MappedPostUserAssessmentResponse
     """
-    if body.id % 2 == 0:
+    if request_body.id % 2 == 0:
         return MappedPostUserAssessmentResponse(
             **{
-                "id": body.id,
-                "fullName": body.full_name,
-                "email": body.email,
-                "phone": body.phone,
-                "fullAddress": body.full_address,
-                "ipv4": body.ipv4,
+                "id": request_body.id,
+                "fullName": request_body.full_name,
+                "email": request_body.email,
+                "phone": request_body.phone,
+                "fullAddress": request_body.full_address,
+                "ipv4": request_body.ipv4,
                 "riskRating": "high",
             }
         )
-    elif body.id % 3 == 0:
+    elif request_body.id % 3 == 0:
         return MappedPostUserAssessmentResponse(
             **{
-                "id": body.id,
-                "fullName": body.full_name,
-                "email": body.email,
-                "phone": body.phone,
-                "fullAddress": body.full_address,
-                "ipv4": body.ipv4,
+                "id": request_body.id,
+                "fullName": request_body.full_name,
+                "email": request_body.email,
+                "phone": request_body.phone,
+                "fullAddress": request_body.full_address,
+                "ipv4": request_body.ipv4,
                 "riskRating": "medium",
             }
         )
     else:
         return MappedPostUserAssessmentResponse(
             **{
-                "id": body.id,
-                "fullName": body.full_name,
-                "email": body.email,
-                "phone": body.phone,
-                "fullAddress": body.full_address,
-                "ipv4": body.ipv4,
+                "id": request_body.id,
+                "fullName": request_body.full_name,
+                "email": request_body.email,
+                "phone": request_body.phone,
+                "fullAddress": request_body.full_address,
+                "ipv4": request_body.ipv4,
                 "riskRating": "low",
             }
         )

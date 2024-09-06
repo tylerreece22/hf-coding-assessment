@@ -31,7 +31,7 @@ class MappedUser(BaseModel):
 '''
 TODO: 
 1. Get users from GET https://api.auth0.com/users using the requests package (this is a fake url)
-2. Map user data to the fields above
+2. Map user data to the pydantic BaseModel class
 3. Return a single mapped user MappedUser
 '''
-def get_users_from_auth0(user_id: str) -> MappedUser:
+def get_user_from_auth0(user_id: str) -> MappedUser:
